@@ -1,0 +1,16 @@
+def duplicate_found(array)
+    hashTable = {}
+    
+    for str_value in array
+        if !hashTable[str_value] == true
+            hashTable[str_value] = true
+        else
+            return str_value
+        end
+    end
+    return 'No duplicates found'
+end
+some_data = ['a','b','c','d','a','b']
+
+end_result = duplicate_found(some_data)
+puts end_result
