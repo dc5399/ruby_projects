@@ -1,0 +1,30 @@
+def intersection(array1, array2)
+    hashTable = {}
+    output = []
+
+    if (array1.length > array2.length)
+        largerArray = array1
+        smallerArray = array2
+    else
+        largerArray = array2
+        smallerArray = array1
+    end
+    for value in largerArray
+        hashTable[value] = true
+    end
+    for value in smallerArray
+        if (hashTable[value] == true)
+            output.push(value)
+            next
+        end
+    end
+    return output
+end
+
+some_data1 = [0,2,4,6,8,10,12]
+some_data2 = [1,2,3,4,5,6]
+
+
+end_result = intersection(some_data1, some_data2)
+
+puts end_result

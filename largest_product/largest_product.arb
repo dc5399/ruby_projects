@@ -1,0 +1,33 @@
+list_of_nums = [7,3,5,2,1]
+
+def largest_product(array)
+  largest_product_so_far = array[0] * array[1] * array[2]
+  i = 0
+  while i < array.length
+    puts "i is currently: #{i}" 
+    j = i + 1
+    while j < array.length
+      puts "j is currently: #{j}"
+      k = j + 1
+      while k < array.length
+        puts "k is currently: #{k}"
+        current_total = array[i] * array[j] * array[k]
+        puts "Current total: #{current_total}"
+        if array[i] * array[j] * array[k] > largest_product_so_far
+          largest_product_so_far = array[i] * array[j] * array[k]
+          puts "largest_product_so_far has been updated"
+        end
+        puts "advancing"
+        k += 1
+        puts "k is now #{k}"
+      end
+      j += 1
+      puts "j is now #{j}"
+    end
+    i += 1
+    puts "i is now #{i}"
+  end
+  return largest_product_so_far
+end
+
+puts largest_product(list_of_nums)

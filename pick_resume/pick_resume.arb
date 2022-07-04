@@ -1,0 +1,21 @@
+def pick_resume(resumes)
+    eliminate = 'top'
+    while resumes.length > 1
+        puts eliminate
+        if eliminate == 'top'
+            resumes = resumes[resumes.length / 2, resumes.length - 1]
+            puts resumes
+            eliminate = 'bottom'
+            puts '-----'
+        elsif eliminate == 'bottom'
+            resumes = resumes[0, resumes.length / 2]
+            eliminate = 'top'
+            puts '*****'
+        end
+    end
+    return resumes[0]
+end
+
+applicants = ['a','b','c','d','e','f','g','h']
+
+puts pick_resume(applicants)
