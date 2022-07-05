@@ -1,0 +1,27 @@
+def missing_letter(str_input)
+    hashTable = {}
+    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    not_present = []
+
+    char_convert = str_input.split('')
+
+    for letter in char_convert
+        hashTable[letter] = true
+        next
+    end
+    for letter in alphabet
+        if !hashTable[letter] == true
+            not_present.push(letter)
+            next
+        else
+            next
+        end
+    end
+    return not_present
+end
+
+some_sentence = 'abcdefghijklmnopqrstuvwxz'
+
+end_result = missing_letter(some_sentence)
+
+puts end_result
